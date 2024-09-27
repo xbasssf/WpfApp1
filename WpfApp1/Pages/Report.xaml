@@ -1,0 +1,33 @@
+﻿<Page x:Class="WpfApp1.Pages.Report"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfApp1.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Report">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+
+        </Grid.RowDefinitions>
+        <TextBlock Text="Профиль пользователя" FontSize="30"  HorizontalAlignment="Center" Margin="0,0,0,20" Grid.Row="0"/>
+        <StackPanel Grid.Row="1" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Width="400" Margin="0,66,0,0">
+            <StackPanel Orientation="Horizontal" Margin="0,15,0,5">
+                <TextBlock Text="Общая сумма ставок: " FontWeight="Bold" FontSize="16"/>
+                <TextBlock x:Name="TotalBetsTextBlock" FontSize="16" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0,5,0,5">
+                <TextBlock Text="Общая сумма выигрышей: " FontWeight="Bold" FontSize="16" />
+                <TextBlock x:Name="TotalWinsTextBlock" FontSize="16" />
+            </StackPanel>
+        </StackPanel>
+        <Button Content="Назад"  Background="DarkRed" Foreground="White" Width="150" Height="40" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Row="1" Click="Button_Click" Margin="0,176,0,0"/>
+
+    </Grid>
+
+</Page>

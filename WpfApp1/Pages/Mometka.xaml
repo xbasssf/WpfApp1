@@ -1,0 +1,43 @@
+﻿<Page x:Class="WpfApp1.Pages.Mometka"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfApp1.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Mometka" Background="LightGray">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Заголовок -->
+        <TextBlock Text="Игра Монетка" FontSize="30"  HorizontalAlignment="Center" Margin="0,0,0,20" Grid.Row="0"/>
+
+        <!-- Основное содержимое -->
+        <StackPanel Grid.Row="1" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center" Width="400">
+            <!-- Ввод суммы ставки -->
+            <StackPanel Orientation="Vertical" VerticalAlignment="Center">
+                <TextBlock Text="Сумма ставки: " FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <TextBox x:Name="BetAmountTextBox" Width="150" Margin="10"/>
+            </StackPanel>
+
+            <!-- Выбор Орёл или Решка -->
+            <TextBlock Text="Выберите Орёл или Решка:" FontSize="16"  HorizontalAlignment="Center" Margin="0,0,0,10"/>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button x:Name="HeadsButton"  Background="Black" Foreground="White" Content="Орёл" Width="100" Height="50" Margin="10" Click="HeadsButton_Click"/>
+                <Button x:Name="TailsButton"  Background="Black" Foreground="White" Content="Решка" Width="100" Height="50" Margin="10" Click="TailsButton_Click"/>
+            </StackPanel>
+
+            <!-- Результат игры -->
+            <TextBlock x:Name="ResultTextBlock" Text="" FontSize="18" Foreground="Lime" HorizontalAlignment="Center" Margin="0,20,0,0"/>
+        </StackPanel>
+
+        <!-- Кнопка Назад -->
+        <Button Content="Назад"  Background="DarkRed" Foreground="White" Width="100" Height="40" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,331,0,0" Click="BackButton_Click" Grid.Row="1"/>
+    </Grid>
+</Page>
